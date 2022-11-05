@@ -1,0 +1,26 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "FrontEnd development with HTML, CSS and vanilla JS, informative and interactive website with users both the visual part and the interaction with the database.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GM-GF/frontend.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JS",
+    "REST",
+    "API"
+  ],
+  "author": "David Santiago Avellaneda Montero <davellaneda.ingeniero@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GM-GF/frontend/issues"
+  },
+  "homepage": "https://github.com/GM-GF/frontend#readme"
+}
