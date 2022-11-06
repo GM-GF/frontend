@@ -1,0 +1,294 @@
+/* Menu styles on desktop */
+header {
+  width: 100%;
+  height: 7rem;
+  position: fixed;
+  background-color: var(--light-mode-background);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+.navbar {
+  width: 90%;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.container-logo {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.school-logo {
+  width: 8rem;
+}
+.icon-menu {
+  display: none;
+}
+.menu-item {
+  height: 100%;
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.menu-item:hover {
+  --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+.menu-item.login {
+  justify-content: center;
+}
+.menu-content {
+  height: 100%;
+  display: flex;
+}
+.menu-link {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #000;
+  display: flex;
+  align-items: center;
+  padding-inline: 2rem;
+}
+.menu-link:hover {
+  color: var(--light-mode-buttons);
+}
+.menu-link span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-link span i {
+  font-size: 1.2rem;
+  margin-left: 0.6rem;
+  transition: transform 0.4s ease;
+}
+@media (min-width: 1000px) {
+  .menu-item:hover span i {
+    transform: rotate(90deg);
+  }
+}
+.submenu-nesting {
+  width: max-content;
+  list-style: none;
+  background-color: #000;
+  position: absolute;
+  clip-path: var(--clip);
+  transition: clip-path 0.4s;
+  margin-block-start: 7rem;
+}
+.submenu-item {
+  height: 5rem;
+}
+.submenu-link {
+  color: #fff;
+  padding: 2rem;
+}
+.submenu-link:hover {
+  color: #fff !important;
+  background-color: #faa930;
+}
+.menu-item.login {
+  margin-left: 1.5rem;
+}
+.menu-item.login a {
+  width: 100%;
+  max-width: 25rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  color: var(--light-mode-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+  border: 3px solid var(--light-mode-buttons);
+  padding: 0.5rem 2rem;
+}
+.menu-item.login a:hover {
+  background: var(--light-mode-buttons);
+  color: #fff;
+}
+@media (min-width: 500px) {
+  .menu-item.login a {
+    max-width: 20rem;
+    height: 4.5rem;
+  }
+}
+@media (min-width: 1100px) {
+  .submenu-item {
+    height: 6rem;
+  }
+  .menu-link {
+    font-size: 1.4rem;
+  }
+  .menu-link span i {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 1200px) {
+  .school-logo {
+    width: 9rem;
+  }
+  .menu-link {
+    font-size: 1.5rem;
+    padding: 0 2.5rem;
+  }
+}
+@media (min-width: 1300px) {
+  .menu-link {
+    font-size: 1.6rem;
+    padding: 0 2.8rem;
+  }
+}
+/* Menu styles on cell phone */
+@media (max-width: 1000px) {
+  header .navbar {
+    width: 85%;
+  }
+  .icon-menu {
+    width: 6rem;
+    height: 100%;
+    position: relative;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 1.5rem;
+    padding-block: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .icon-menu span {
+    width: 3.5rem;
+    height: 0.4rem;
+    border-radius: 0.2rem;
+    position: absolute;
+    background-color: #000;
+    transition: all 0.4s ease;
+  }
+  .icon-menu span:nth-child(1) {
+    transform: translateY(-10px);
+  }
+  .icon-menu.active span:nth-child(1) {
+    width: 4rem;
+    transform: translateY(0) rotate(45deg);
+    transition-delay: 0.125s;
+  }
+  .icon-menu span:nth-child(2) {
+    transform: translateY(10px);
+  }
+  .icon-menu.active span:nth-child(2) {
+    width: 4rem;
+    transform: translateY(0) rotate(315deg);
+    transition-delay: 0.25s;
+  }
+  .icon-menu.active span:nth-child(3) {
+    transform: translateX(6rem);
+  }
+  .menu-content {
+    width: 100%;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 7rem;
+    bottom: 0;
+    background-color: var(--light-mode-background);
+    overflow-y: auto;
+    display: grid;
+    grid-auto-rows: max-content;
+    transform: translateX(-100%);
+    z-index: 50;
+    padding-bottom: 20rem;
+  }
+  .menu-content .menu-link span {
+    margin-left: auto;
+  }
+  .menu-content .menu-link span i {
+    font-size: 1.4rem;
+  }
+  .menu-content.active {
+    width: 100%;
+    transform: unset;
+    border-top: 1px solid #000;
+  }
+  .menu-item {
+    height: 99%;
+    --clip: 0;
+    overflow: hidden;
+  }
+  .menu-link {
+    height: 7rem;
+    font-size: 1.6rem;
+    color: #000;
+    padding-inline-start: 3rem;
+  }
+  .menu-link:hover {
+    color: initial;
+  }
+  .menu-link-active {
+    background-color: #faa930;
+  }
+  .submenu.menu-link-active .menu-link {
+    color: #fff;
+  }
+  .submenu.menu-link-active .submenu-item .menu-link {
+    color: #000;
+  }
+  .submenu.menu-link-active span i {
+    color: #fff;
+    transform: rotate(90deg);
+  }
+  .submenu-nesting {
+    width: 100%;
+    height: 0;
+    background-color: var(--light-mode-background);
+    margin: 0;
+    display: grid;
+    position: unset;
+    transition: height 0.4s ease;
+  }
+  .submenu-item {
+    height: 100%;
+  }
+  .submenu-link {
+    width: 90%;
+    margin-inline-start: auto;
+    border-left: 0.2rem solid #000;
+  }
+  .menu-item.login {
+    display: block;
+    margin: 1.6rem 0 0 3rem;
+  }
+  .menu-item.login a {
+    width: 50%;
+    height: 4.5rem;
+    border-radius: 0.5rem;
+    color: var(--light-mode-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-weight: bold;
+    border: 3px solid var(--light-mode-buttons);
+  }
+}
+@media (min-width: 378px) AND (max-width: 1000px) {
+  header .navbar {
+    width: 80%;
+  }
+  .menu-link {
+    font-size: 1.8rem;
+  }
+  .menu-content .menu-link span i {
+    font-size: 1.5rem;
+  }
+}
