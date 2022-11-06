@@ -18,10 +18,94 @@
       content="Institución educativa de caracter privado, orientada por principios y valores humanos."
     />
     <title>Inicio | G.M.G.F</title>
+    <link rel="stylesheet" href="./src/css/index.css" />
   </head>
   <body id="body" class="index">
     <header></header>
+    <main>
+      <section class="index-section1">
+        <div class="slider">
+          <div id="slide1" class="slide slide1 slide-active">
+            <img
+              data-src="https://g-m-g-f.github.io/images/assets/m/home/graduados-2021.jpg"
+              alt="Graduados 2021"
+              class="slide-image responsive"
+            />
+            <div class="slide-content">
+              <p>
+                Si no estás dispuesto a aprender nadie te puede ayudar. Si estás
+                dispuesto a aprender nadie te puede parar
+              </p>
+            </div>
+          </div>
+          <div id="slide2" class="slide slide2">
+            <img
+              data-src="https://g-m-g-f.github.io/images/assets/m/home/estudiante.jpg"
+              alt="Estudiante de preescolar"
+              class="slide-image responsive"
+            />
+            <div class="slide-content">
+              <h2>Comunícate con nosotros para más información</h2>
+              <a href="./contacto" aria-label="Página de contacto"
+                >Contáctanos</a
+              >
+            </div>
+          </div>
+          <div id="slide3" class="slide slide3">
+            <img
+              data-src="https://g-m-g-f.github.io/images/assets/m/home/izada-de-bandera.jpg"
+              alt="Izada de bandera"
+              class="slide-image responsive"
+            />
+            <div class="slide-content">
+              <h2>
+                Visita nuestra galería, encontrarás<br />diferentes eventos
+              </h2>
+              <a href="./galeria" aria-label="Página de galería">Ingresar</a>
+            </div>
+          </div>
+          <div id="slide4" class="slide slide4">
+            <img
+              data-src="https://g-m-g-f.github.io/images/assets/m/home/libro.jpg"
+              alt="Libro abierto"
+              class="slide-image responsive"
+            />
+            <div class="slide-content">
+              <h2>Niveles educativos</h2>
+              <a
+                href="./niveles-educativos"
+                aria-label="Página de cuadro de honor"
+              >
+                Consultar
+              </a>
+              <p>La educación es el<br />pasaporte hacia el futuro</p>
+            </div>
+          </div>
+        </div>
+        <div id="navBtns" class="navBtns">
+          <button aria-label="Ver imagen 1"></button>
+          <button aria-label="Ver imagen 2"></button>
+          <button aria-label="Ver imagen 3"></button>
+          <button aria-label="Ver imagen 4"></button>
+        </div>
+        <button
+          id="prev"
+          class="arrow-btn"
+          aria-label="Regresar a la imagen anterior"
+        >
+          <i class="fa-solid fa-angle-left"></i>
+        </button>
+        <button
+          id="next"
+          class="arrow-btn"
+          aria-label="Pasar a la siguiente imagen"
+        >
+          <i class="fa-solid fa-angle-right"></i>
+        </button>
+      </section>
+    </main>
     <footer class="footer"></footer>
     <script src="./src/js/index/index.js" type="module"></script>
+    <script src="./src/js/mainPages/index.js" type="module"></script>
   </body>
 </html>
