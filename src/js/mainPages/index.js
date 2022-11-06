@@ -1,4 +1,4 @@
-import imagesResponsive from "./images-responsive";
+import imagesResponsive from "./images-responsive.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   imagesResponsive();
