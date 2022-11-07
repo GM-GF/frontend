@@ -17,7 +17,7 @@ export default function footer() {
         </a>
       </div>
     </section>
-    <section class="footer-section2">
+    <section class="footer-section2 lazy-loading">
       <div class="footer-section2-content">
         <h2>Contáctanos</h2>
         <p>Dirección: Cra. 114 #152d-6 - Bogotá <a href="https://maps.app.goo.gl/8JMnz4xNHoBGAgyH8" target="about_blank" rel="noopener noreferrer">Google Maps</a></p>
@@ -25,7 +25,7 @@ export default function footer() {
         <p>Email: <a href="mailto:generaciondelfuturo2020@hotmail.com?subject=Tu%20asunto">generaciondelfuturo2020@hotmail.com</a></p>
       </div>
       <div class="footer-section2-logo">
-        <img src="https://g-m-g-f.github.io/images/assets/m/footer/school-logo.svg" alt="Logo del colegio Gimnasio Moderno Generación del Futuro" />
+        <img data-src="https://g-m-g-f.github.io/images/assets/m/footer/school-logo.svg" alt="Logo del colegio Gimnasio Moderno Generación del Futuro" class="no-responsive" />
       </div>
     </section>
     <section class="footer-section3">
