@@ -24,7 +24,53 @@
   <body>
     <script src="./src/js/mainPages/banner.js"></script>
     <header></header>
-    <main></main>
+    <main>
+      <section class="anthem-section1">
+        <div class="container-title-btns">
+          <h1>Gimnasio Moderno</h1>
+          <div class="anthem-section1-btns">
+            <div>
+              <button
+                aria-label="Reproducir himno"
+                id="play-sound"
+                class="play-sound"
+              ></button>
+              <p>Reproducir audio</p>
+            </div>
+            <div class="pause-sound-hidden">
+              <button aria-label="Pausar himno" id="pause-sound"></button>
+              <p>Pausar audio</p>
+            </div>
+            <div>
+              <button aria-label="Reinicar himno" id="reset-sound"></button>
+              <p>Reiniciar audio</p>
+            </div>
+          </div>
+        </div>
+        <div class="anthem-section1-content">
+          <div class="sound-phone"></div>
+          <div class="letter-a">
+            <img
+              data-src="https://g-m-g-f.github.io/images/assets/m/we/anthem/emoji.jpg"
+              alt="Emoji sonriente"
+              id="emoji"
+              class="responsive"
+            />
+          </div>
+          <div class="title-phone">
+            <h2>Himno</h2>
+          </div>
+          <div class="container-content-phone">
+            <div class="content-phone" id="content-phone">
+              <p>
+                Formamos los dirigentes, los padres, los funcionarios que
+                dirigirán el mañana.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="./src/js/mainPages/index.js" type="module"></script>
   </body>
 </html>
