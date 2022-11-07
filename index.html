@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <script
-      src="https://kit.fontawesome.com/bb3d7e01ea.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="./src/js/mainPages/htmlHead1.js"></script>
     <script src="./src/js/globalHtmlHead.js" type="module"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,8 +16,13 @@
     />
     <title>Inicio | G.M.G.F</title>
     <link rel="stylesheet" href="./src/css/index.css" />
+    <script
+      src="https://kit.fontawesome.com/bb3d7e01ea.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body id="body" class="index">
+  <body class="index">
+    <script src="./src/js/mainPages/banner.js"></script>
     <header></header>
     <main>
       <section class="index-section1">
@@ -103,15 +105,16 @@
           <i class="fa-solid fa-angle-right"></i>
         </button>
       </section>
-      <section class="index-section2">
+      <section class="index-section2 lazy-loading">
         <h2 class="animate">Conoce más sobre nosotros</h2>
         <div class="section2-cards">
           <div class="section2-card animate">
             <div class="card-title">
               <div>
                 <img
-                  src="https://g-m-g-f.github.io/images/assets/m/home/license.svg"
+                  data-src="https://g-m-g-f.github.io/images/assets/m/home/license.svg"
                   alt="Ícono de tarjeta de presentación."
+                  class="no-responsive"
                 />
               </div>
               <h3>Personal</h3>
@@ -130,8 +133,9 @@
             <div class="card-title">
               <div>
                 <img
-                  src="https://g-m-g-f.github.io/images/assets/m/home/statistics.svg"
+                  data-src="https://g-m-g-f.github.io/images/assets/m/home/statistics.svg"
                   alt="Ícono de tarjeta de un balance o estadísticas."
+                  class="no-responsive"
                 />
               </div>
               <h3>Niveles educativos</h3>
@@ -150,8 +154,9 @@
             <div class="card-title">
               <div>
                 <img
-                  src="https://g-m-g-f.github.io/images/assets/m/home/school.svg"
+                  data-src="https://g-m-g-f.github.io/images/assets/m/home/school.svg"
                   alt="Ícono de la estructura física de una escuela."
+                  class="no-responsive"
                 />
               </div>
               <h3>Instalaciones</h3>
@@ -170,8 +175,9 @@
             <div class="card-title">
               <div>
                 <img
-                  src="https://g-m-g-f.github.io/images/assets/m/home/social-media.svg"
+                  data-src="https://g-m-g-f.github.io/images/assets/m/home/social-media.svg"
                   alt="Ícono de un celular conectado a las redes sociales."
+                  class="no-responsive"
                 />
               </div>
               <h3>Redes sociales</h3>
@@ -215,7 +221,7 @@
           proyectados a la comunidad.
         </p>
       </section>
-      <section class="index-section5">
+      <section class="index-section5 lazy-loading">
         <div class="section5-container">
           <div class="section5-video animate">
             <video
@@ -229,8 +235,9 @@
             <div class="container-image">
               <a href="./niveles-educativos" class="image">
                 <img
-                  src="https://g-m-g-f.github.io/images/assets/m/home/levels.svg"
+                  data-src="https://g-m-g-f.github.io/images/assets/m/home/levels.svg"
                   alt="Ícono sobre una persona subiendo las escaleras."
+                  class="no-responsive"
                 />
               </a>
             </div>
@@ -241,8 +248,9 @@
             <div class="container-image">
               <a href="./bienvenida" class="image">
                 <img
-                  src="https://g-m-g-f.github.io/images/assets/m/home/location.svg"
+                  data-src="https://g-m-g-f.github.io/images/assets/m/home/location.svg"
                   alt="Ícono de ubicación."
+                  class="no-responsive"
                 />
               </a>
             </div>
@@ -253,8 +261,9 @@
             <div class="container-image">
               <a href="./galeria" class="image">
                 <img
-                  src="https://g-m-g-f.github.io/images/assets/m/home/gallery.svg"
+                  data-src="https://g-m-g-f.github.io/images/assets/m/home/gallery.svg"
                   alt="Ícono de galería o fotos."
+                  class="no-responsive"
                 />
               </a>
             </div>
@@ -268,7 +277,7 @@
       </section>
     </main>
     <footer></footer>
-    <script src="./src/js/index/index.js" type="module"></script>
     <script src="./src/js/mainPages/index.js" type="module"></script>
+    <script src="./src/js/index/index.js" type="module"></script>
   </body>
 </html>
