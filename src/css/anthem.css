@@ -1,0 +1,378 @@
+.anthem-section1 {
+  width: 100%;
+  height: 100vh;
+  background-color: #f35c5c;
+  background-image: var(--texture-white);
+  padding: 10rem 1.5rem 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+.anthem-section1 h1 {
+  font-size: 2.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  margin-block-end: 3rem;
+}
+.anthem-section1-btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.anthem-section1-btns div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.anthem-section1 button {
+  width: 5.5rem;
+  height: 5.5rem;
+  background-color: #000;
+  border-radius: 100%;
+  border: none;
+  box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.6rem;
+  margin-block-end: 1rem;
+}
+.anthem-section1 button i {
+  font-size: 3rem;
+  color: #fff;
+}
+#play-sound svg {
+  margin-inline-start: 0.3rem;
+}
+.anthem-section1-btns div p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.1rem;
+}
+.pause-sound-hidden,
+.container-activeSound-hidden {
+  display: none !important;
+}
+.anthem-section1-content {
+  width: 20rem;
+  height: auto;
+  background-color: #fff;
+  border-radius: 3rem;
+  box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -6rem;
+  padding: 3rem 2rem 8rem;
+  margin: 3rem auto 0;
+}
+.sound-phone {
+  width: 4rem;
+  height: 0.5rem;
+  background-color: #000;
+  border-radius: 3rem;
+  margin: auto;
+}
+.letter-a {
+  width: 8rem;
+  height: 8rem;
+  background-color: #fff;
+  background-image: url("https://g-m-g-f.github.io/images/assets/m/tab-logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 5rem;
+  border-radius: 100%;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 2rem auto;
+}
+.letter-a img {
+  width: inherit;
+  height: inherit;
+  border-radius: 100%;
+  box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  transform: translateX(70%);
+  transition: all 1.6s ease;
+  z-index: 1;
+}
+.letter-a .emoji-active {
+  transform: translateX(0);
+}
+.title-phone {
+  width: 10rem;
+  background-color: #ffb800;
+  border-radius: 3rem;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 0.3rem 1rem;
+  margin: 2rem auto;
+}
+.title-phone h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.container-content-phone {
+  width: 15rem;
+  height: 8rem;
+  background-color: #c8c8c8;
+  border-radius: 2rem;
+  position: relative;
+  margin: auto;
+}
+.content-phone {
+  width: inherit;
+  height: inherit;
+  background-color: #dedae0;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.5);
+  border-radius: inherit;
+  display: flex;
+  position: absolute;
+  transform: translateX(-50%);
+  transition: all 1.6s ease;
+  padding: 1rem;
+}
+.container-content-phone .content-phone-active {
+  transform: translateX(0);
+}
+.content-phone p {
+  font-size: 1.2rem;
+  text-align: center;
+}
+@media (min-width: 375px) AND (max-height: 670px) {
+  .anthem-section1 h1 {
+    margin-block-start: 1rem !important;
+  }
+  .anthem-section1-content {
+    width: 24rem !important;
+  }
+  .letter-a {
+    width: 11rem !important;
+    height: 11rem !important;
+  }
+  .letter-a .emoji-active {
+    transform: translateX(0);
+  }
+  .title-phone {
+    width: 11rem !important;
+  }
+  .title-phone h2 {
+    font-size: 1.4rem !important;
+  }
+  .container-content-phone {
+    width: 12rem !important;
+    height: 7rem !important;
+  }
+  .content-phone {
+    padding: 0.7rem !important;
+  }
+  .content-phone p {
+    font-size: 1rem !important;
+  }
+}
+@media (min-width: 375px) {
+  .anthem-section1 h1 {
+    font-size: 3rem;
+    margin-block-start: 4rem;
+  }
+  .anthem-section1 button {
+    width: 8rem;
+    height: 8rem;
+    padding: 2.4rem;
+    margin-block-end: 1.5rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .anthem-section1-btns div p {
+    font-size: 1.5rem;
+  }
+  .anthem-section1-content {
+    width: 28rem;
+  }
+  .sound-phone {
+    width: 6rem;
+    height: 0.6rem;
+  }
+  .letter-a {
+    width: 15rem;
+    height: 15rem;
+  }
+  .title-phone {
+    width: 14rem;
+  }
+  .title-phone h2 {
+    font-size: 1.8rem;
+  }
+  .container-content-phone {
+    width: 20rem;
+    height: 12rem;
+  }
+  .content-phone {
+    padding: 2rem;
+  }
+  .content-phone p {
+    font-size: 1.5rem;
+  }
+  @media (min-height: 600px) {
+    .letter-a {
+      background-size: 6.5rem;
+    }
+  }
+  @media (min-height: 750px) {
+    .letter-a {
+      background-size: 8rem;
+    }
+  }
+}
+@media (min-width: 500px) {
+  .anthem-section1 {
+    padding: 10rem 5rem 5rem;
+  }
+  .anthem-section1 h1 {
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+    margin-block-end: 5rem;
+  }
+  .anthem-section1 button {
+    width: 9.5rem;
+    height: 9.5rem;
+    padding: 2.6rem;
+    margin-block-end: 2rem;
+  }
+  .anthem-section1-btns div p {
+    font-size: 2rem;
+  }
+  .anthem-section1-content {
+    width: 45rem;
+    height: auto;
+    bottom: -6rem;
+    padding: 5rem 3rem 10rem;
+    margin: 3rem auto 0;
+  }
+  .sound-phone {
+    width: 8rem;
+    height: 0.7rem;
+  }
+  .letter-a {
+    width: 19rem;
+    height: 19rem;
+    background-size: 9rem;
+    margin: 5rem auto;
+  }
+  .letter-a p {
+    font-size: 15rem;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  .title-phone {
+    width: 19rem;
+    padding: 0.4rem 1.2rem;
+    margin: 5rem auto;
+  }
+  .title-phone h2 {
+    font-size: 2.5rem;
+  }
+  .container-content-phone {
+    width: 25rem;
+    height: 12rem;
+    border-radius: 2.5rem;
+  }
+  .content-phone {
+    padding: 2.5rem;
+  }
+  .content-phone p {
+    font-size: 1.6rem;
+  }
+  @media (max-height: 768px) {
+    .anthem-section1 {
+      padding: 8rem 5rem 3rem;
+    }
+    .anthem-section1 h1 {
+      font-size: 3rem;
+    }
+    .anthem-section1 button {
+      width: 8.5rem;
+      height: 8.5rem;
+      padding: 2.6rem;
+    }
+    .anthem-section1-btns div p {
+      font-size: 1.8rem;
+    }
+    .anthem-section1-content {
+      width: 38rem;
+      padding: 3rem 2rem 8rem;
+    }
+    .letter-a {
+      width: 13rem;
+      height: 13rem;
+      margin: 3rem auto;
+    }
+    .title-phone {
+      width: 13rem;
+      margin: 3rem auto;
+    }
+    .title-phone h2 {
+      font-size: 2 rem;
+    }
+    .container-content-phone {
+      width: 23rem;
+      height: 10rem;
+    }
+    .content-phone {
+      padding: 1.8rem;
+    }
+    .content-phone p {
+      font-size: 1.5rem;
+    }
+  }
+}
+@media (min-width: 1000px) {
+  .anthem-section1 {
+    display: flex;
+    align-items: center;
+    padding: 5rem;
+  }
+  .container-title-btns {
+    width: 50%;
+  }
+  .anthem-section1 h1 {
+    font-size: 4rem;
+  }
+  .anthem-section1-btns {
+    max-width: 52rem;
+    margin: auto;
+  }
+  .anthem-section1 button:hover {
+    transform: scale(1.2);
+  }
+  .anthem-section1-btns div p {
+    font-size: 1.9rem;
+  }
+  .anthem-section1-content {
+    width: 42rem;
+    right: 10%;
+    transform: translateX(0);
+    padding: 5rem 2rem 10rem;
+  }
+  .letter-a {
+    width: 17rem;
+    height: 17rem;
+    background-size: 10rem;
+  }
+  .title-phone {
+    width: 17rem;
+  }
+  .title-phone h2 {
+    font-size: 2.3rem;
+  }
+  .container-content-phone {
+    width: 25rem;
+    height: 11rem;
+  }
+  .content-phone {
+    padding: 1.5rem;
+  }
+  .content-phone p {
+    font-size: 1.7rem;
+  }
+}
