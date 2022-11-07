@@ -1,30 +1,13 @@
-export default function lazyLoad(imageLazyLoading) {
-  const $images = document.querySelectorAll(imageLazyLoading);
-  const $containersImages = document.querySelectorAll(imageLazyLoading);
-  setTimeout(() => {
-    document
-      .querySelectorAll("img")
-      .forEach((e) =>
-        e.addEventListener("contextmenu", (e) => e.preventDefault())
-      );
-  }, 2000);
-  document
-    .querySelectorAll("video")
-    .forEach((e) =>
-      e.addEventListener("contextmenu", (e) => e.preventDefault())
-    );
+export default function lazyLoad(image) {
+  const $images = document.querySelectorAll(image);
   // Saber de qué tamaño está el viewport para añadir al data-src si es tablet /t/ o desktop /d/, o sino es el valor que tiene en el HTML
   function imagesResponsiveDataset() {
     $images.forEach((e) => {
-      if (window.innerWidth > 600) {
-        if (e.getAttribute("data-src").indexOf("/m/"))
+      if (!e.classList.contains("no-responsive")) {
+        if (window.innerWidth > 600 && window.innerWidth < 1000)
           e.dataset.src = e.getAttribute("data-src").replace("/m/", "/t/");
-        if (e.getAttribute("data-src").indexOf("/d/"))
-          e.dataset.src = e.getAttribute("data-src").replace("/d/", "/t/");
-      }
-      if (window.innerWidth > 1000) {
-        if (e.getAttribute("data-src").indexOf("/t/"))
-          e.dataset.src = e.getAttribute("data-src").replace("/t/", "/d/");
+        if (window.innerWidth > 1000)
+          e.dataset.src = e.getAttribute("data-src").replace("/m/", "/d/");
       }
     });
   }
@@ -42,5 +25,5 @@ export default function lazyLoad(imageLazyLoading) {
     rootMargin: "0px",
     threshold: 0,
   });
-  $containersImages.forEach((img) => observer.observe(img));
+  $images.forEach((img) => observer.observe(img));
 }
