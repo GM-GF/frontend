@@ -712,7 +712,7 @@
 }
 .index-section5 p {
   max-width: 28rem;
-  font-size: 1.6rem;
+  font-size: 2rem;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -748,7 +748,7 @@
   .index-section5 p {
     width: auto;
     max-width: 30rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
   .section5-video {
     grid-column: 1 / 3;
