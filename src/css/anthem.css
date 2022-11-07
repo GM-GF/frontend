@@ -42,7 +42,7 @@
 }
 .anthem-section1 button i {
   font-size: 3rem;
-  color: #fff;
+  color: var(--light-mode-buttons);
 }
 #play-sound svg {
   margin-inline-start: 0.3rem;
