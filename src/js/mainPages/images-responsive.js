@@ -5,52 +5,38 @@ export default function imagesResponsive() {
   // Primero se descargan la 1 primer imagen después de 0.5s se descarga la segunda imagen, después de 1s se descargan las 2 imágenes restantes.
   function slidesIndex() {
     const $images = document.querySelectorAll(".slide img");
+    for (let i = 0; i < 1; i++) {
+      $images[i].src = $images[i].dataset.src;
+    }
     setTimeout(() => {
-      for (let i = 0; i < 1; i++) {
+      for (let i = 1; i <= 1; i++) {
         $images[i].src = $images[i].dataset.src;
       }
       setTimeout(() => {
-        for (let i = 1; i <= 1; i++) {
+        for (let i = 2; i <= 3; i++) {
           $images[i].src = $images[i].dataset.src;
         }
-        setTimeout(() => {
-          for (let i = 2; i <= 3; i++) {
-            $images[i].src = $images[i].dataset.src;
-          }
-        }, 500);
-      }, 500);
-    });
+      }, 1000);
+    }, 1000);
   }
   function imagesSrc() {
     $img.forEach((e) => {
       if (window.innerWidth < 600) {
-        if (e.getAttribute("data-src").indexOf("/t/"))
-          e.dataset.src = e.getAttribute("data-src").replace("/t/", "/m/");
-        if (body.classList.contains("index")) {
-          slidesIndex();
-        } else {
-          e.src = e.dataset.src;
-        }
+        document.body.classList.contains("index")
+          ? slidesIndex()
+          : (e.src = e.dataset.src);
       }
-      if (window.innerWidth > 600) {
-        if (e.getAttribute("data-src").indexOf("/m/"))
-          e.dataset.src = e.getAttribute("data-src").replace("/m/", "/t/");
-        if (e.getAttribute("data-src").indexOf("/d/"))
-          e.dataset.src = e.getAttribute("data-src").replace("/d/", "/t/");
-        if (body.classList.contains("index")) {
-          slidesIndex();
-        } else {
-          e.src = e.dataset.src;
-        }
+      if (window.innerWidth > 600 && window.innerWidth < 1000) {
+        e.dataset.src = e.getAttribute("data-src").replace("/m/", "/t/");
+        document.body.classList.contains("index")
+          ? slidesIndex()
+          : (e.src = e.dataset.src);
       }
       if (window.innerWidth > 1000) {
-        if (e.getAttribute("data-src").indexOf("/t/"))
-          e.dataset.src = e.getAttribute("data-src").replace("/t/", "/d/");
-        if (body.classList.contains("index")) {
-          slidesIndex();
-        } else {
-          e.src = e.dataset.src;
-        }
+        e.dataset.src = e.getAttribute("data-src").replace("/m/", "/d/");
+        document.body.classList.contains("index")
+          ? slidesIndex()
+          : (e.src = e.dataset.src);
       }
     });
   }
