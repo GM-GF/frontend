@@ -25,4 +25,4 @@ When you log in
 
 ## Site preview
 
-[GMGF](https://GM-GF.io/frontend/)
+[GMGF](https://gm-gf.github.io/frontend)
