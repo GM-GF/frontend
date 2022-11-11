@@ -4,7 +4,7 @@ document.querySelector("head").insertAdjacentHTML(
     <!-- Global styles -->
     <link rel="stylesheet" href="./src/css/global.css" />
     <!-- Favicon -->
-    <link rel="shortcut icon" href="https://quiwop.github.io/media/favicon.png" />
+    <link rel="shortcut icon" href="https://g-m-g-f.github.io/images/assets/m/tab-logo.png" />
     <!-- Font Family -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
