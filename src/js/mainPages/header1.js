@@ -27,9 +27,6 @@ export default function header(container) {
           <a href="./niveles-educativos" class="menu-link">Niveles educativos</a>
         </li>
         <li class="menu-item">
-          <a href="./circulares" class="menu-link">Circulares</a>
-        </li>
-        <li class="menu-item">
           <a href="./galeria" class="menu-link">Galería</a>
         </li>
         <li class="menu-item">
