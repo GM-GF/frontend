@@ -381,3 +381,434 @@
     color: rgba(0, 0, 0, 0.8);
   }
 }
+.welcome-section3,
+.welcome-section4 {
+  width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 3rem;
+}
+.welcome-section3-image,
+.welcome-section4-image {
+  width: 80%;
+  max-width: 27rem;
+  min-height: 21rem;
+  background-color: #ffe5a0;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block-end: 4rem;
+  visibility: hidden;
+}
+.welcome-section3-image img,
+.welcome-section4-image img {
+  width: 100%;
+  padding: 4rem;
+}
+.welcome-section3-content,
+.welcome-section4-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.welcome-section3-content h2,
+.welcome-section4-content h2 {
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 700;
+  padding-inline: 1.5rem;
+  margin-block-end: 2rem;
+  visibility: hidden;
+}
+.welcome-section3-content p,
+.welcome-section4-content p {
+  font-size: 1.5rem;
+  text-align: justify;
+  line-height: 2.2rem;
+  margin-block-end: 4rem;
+  visibility: hidden;
+}
+.welcome-section3-content button,
+.welcome-section4-content button {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: #faa930;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  visibility: hidden;
+}
+.welcome-section3-popUp,
+.welcome-section4-popUp {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transform: scale(0);
+  transition: all 0.6s ease;
+}
+.active-popUp {
+  transform: scale(1);
+}
+.container-content-popUp {
+  width: 80%;
+  height: 80vh;
+  background-color: #fff;
+  box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  position: relative;
+}
+.content-popUp {
+  width: 100%;
+  height: 100%;
+  padding: 3rem 0 1rem;
+  overflow-y: auto;
+}
+.popUp-loader {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 1rem;
+  position: absolute;
+  top: 0;
+  transition: all 0.6s ease;
+  z-index: 1;
+}
+.popUp-loader svg {
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hide-loader {
+  opacity: 0;
+}
+.popUp-iconClose {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: -2%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.popUp-iconClose button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  background-color: #fff;
+  border-radius: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popUp-iconClose button i {
+  font-size: 3rem;
+  color: #e31a1a;
+}
+.popup-images {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.popup-images .image {
+  width: 75%;
+  position: relative;
+  box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.4);
+  margin-block-end: 3rem;
+  margin-inline: auto;
+}
+.popup-images img {
+  width: 100%;
+}
+.popup-images .text {
+  width: 100%;
+  background: #faa930;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 1.5rem;
+}
+.popup-images .text svg {
+  width: 2.5rem;
+}
+.popup-images .text h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  margin-inline-start: 1rem;
+}
+@media (min-width: 375px) {
+  .content-popUp {
+    padding: 4rem 0 1rem;
+  }
+  .popup-images .image {
+    margin-block-end: 4rem;
+  }
+  .popup-images .text svg {
+    width: 2.6rem;
+  }
+  .popup-images .text h3 {
+    font-size: 1.3rem;
+    margin-inline-start: 1.5rem;
+  }
+
+  @media (min-height: 700px) {
+    .welcome-section2 {
+      padding: 7rem 3rem 0;
+    }
+    .welcome-section2-video .background {
+      width: 27rem;
+      height: 14rem;
+      margin-inline-start: 5rem;
+    }
+    .welcome-section2-content {
+      margin-block-start: 3rem;
+    }
+    .welcome-section2-content h2,
+    .welcome-section3-content h2,
+    .welcome-section4-content h2 {
+      font-size: 2.6rem;
+      margin-block-end: 4rem;
+    }
+    .welcome-section2-content p,
+    .welcome-section3-content p,
+    .welcome-section4-content p {
+      font-size: 2rem;
+      line-height: 3.5rem;
+    }
+    .welcome-linksVideo button {
+      width: 13rem;
+      font-size: 1.9rem;
+    }
+    .welcome-linksVideo a {
+      width: 13rem;
+      font-size: 1.7rem;
+    }
+    .welcome-section3-image {
+      min-height: 26rem;
+    }
+    .welcome-section3-content button,
+    .welcome-section4-content button {
+      font-size: 2rem;
+      padding: 1.2rem 2.2rem;
+    }
+    .container-iconClose {
+      position: absolute;
+      top: -2.5%;
+      right: -5%;
+    }
+    .container-iconClose button {
+      width: 3rem;
+      height: 3rem;
+    }
+    .popup-images .text svg {
+      width: 2.7rem;
+    }
+    .popup-images .text h3 {
+      font-size: 1.5rem;
+      margin-inline-start: 1.8rem;
+    }
+    .maps-text h3 {
+      font-size: 2rem;
+    }
+    .maps-text p {
+      font-size: 1.7rem;
+      line-height: 2.5rem;
+    }
+    .maps-text a {
+      font-size: 1.7rem;
+      padding: 1.2rem;
+    }
+  }
+  @media (min-height: 810px) {
+    .welcome-section2-content {
+      margin-block-start: 6rem;
+    }
+  }
+}
+@media (min-width: 500px) {
+  .welcome-section3,
+  .welcome-section4 {
+    padding: 6rem;
+  }
+  .welcome-section3-image,
+  .welcome-section4-image {
+    width: 60%;
+    max-width: 42rem;
+  }
+  .welcome-section3-image img,
+  .welcome-section4-image img {
+    padding: 5rem;
+  }
+  .welcome-section3-content button,
+  .welcome-section4-content button {
+    font-size: 2.4rem;
+  }
+  .popUp-loader svg {
+    width: 30%;
+  }
+  .popUp-iconClose {
+    top: -1.5%;
+  }
+  .popup-images {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1000px) {
+  .welcome-section3,
+  .welcome-section4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .welcome-section3-image,
+  .welcome-section4-image {
+    max-width: 35rem;
+    margin: auto;
+  }
+  .welcome-section3-content {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  .content-popUp::-webkit-scrollbar {
+    width: 0.7rem;
+    background-color: #fff;
+  }
+  .content-popUp::-webkit-scrollbar-thumb {
+    background-color: #faa930;
+    border-radius: 1rem;
+  }
+  .popUp-loader svg {
+    width: 15%;
+  }
+  .popUp-iconClose {
+    top: -2%;
+  }
+  .popup-images {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.welcome-section4 {
+  background-color: #f35c5c;
+  background-image: var(--texture-white);
+  color: #fff;
+}
+.welcome-section4-image {
+  background-color: #fff;
+}
+.welcome-section4 button {
+  background-color: #fff;
+  color: #000;
+}
+.maps {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.maps-map {
+  width: 80%;
+  height: 50%;
+  background-color: #ff1d1d;
+  margin: auto;
+}
+.maps-map iframe {
+  width: 102%;
+  height: 102%;
+}
+.maps-text {
+  width: 80%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.maps-text h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: #000;
+  margin-block-end: 1rem;
+}
+.maps-text p {
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 2rem;
+  color: #000;
+  margin-block-end: 1rem;
+}
+.maps-text a {
+  color: #fff;
+  font-size: 1.2rem;
+  background-color: #fe5e3a;
+  box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.25);
+  padding: 0.8rem;
+}
+@media (min-width: 500px) {
+  .maps-text h3 {
+    font-size: 3rem;
+    margin-block-end: 3rem;
+  }
+  .maps-text p {
+    font-size: 2rem;
+    line-height: 3.5rem;
+    margin-block-end: 3rem;
+  }
+  .maps-text a {
+    font-size: 2.2rem;
+    padding: 1.5rem;
+  }
+}
+@media (min-width: 1000px) {
+  .welcome-section4-content {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .maps {
+    flex-direction: row;
+  }
+  .maps-map {
+    width: 40%;
+  }
+  .maps-text {
+    width: 40%;
+  }
+  .maps-text h3 {
+    font-size: 3rem;
+    margin-block-end: 3rem;
+  }
+  .maps-text p {
+    font-size: 2rem;
+    line-height: 3.5rem;
+    margin-block-end: 3rem;
+  }
+  .maps-text a {
+    font-size: 2rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+  }
+  .maps-text a:hover {
+    transform: scale(1.1);
+  }
+  .welcome-section4 .content-popUp {
+    padding: 0;
+  }
+}
