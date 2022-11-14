@@ -149,4 +149,82 @@ export default function formValidations() {
       eye = true;
     }
   });
+  const $form = document.getElementById("form");
+  document.addEventListener("submit", async (e) => {
+    if (e.target == $form) {
+      e.preventDefault();
+      $input.forEach((el) => {
+        el.click();
+        el.addEventListener("click", validation);
+      });
+      if (idStatus && pwdStatus && globalStatus) {
+        const swalCustomClass = Swal.mixin({
+          customClass: {
+            confirmButton: "swal-btn swal-confirm-btn",
+            cancelButton: "swal-btn swal-cancel-btn",
+          },
+          buttonsStyling: true,
+        });
+        try {
+          const $id = document.getElementById("id").value;
+          const $pwd = document.getElementById("pwd").value;
+          let options = {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json; charset=utf-8",
+            },
+            body: JSON.stringify({
+              id: $id,
+              pwd: $pwd,
+            }),
+          };
+          const res = await fetch(`${domain()}/login`, options);
+          const data = await res.json();
+          if (!res.ok) {
+            throw {
+              status: res.status,
+              statusText: res.statusText,
+              data: data,
+            };
+          } else {
+            const instiId = localStorage.setItem(
+              "instiId",
+              data.body.user.instiId
+            );
+            const token = localStorage.setItem("token", data.body.token);
+            localStorage.getItem("instiId") ? instiId : instiId;
+            localStorage.getItem("token") ? token : token;
+            swalCustomClass.fire({
+              position: "center",
+              icon: data.body.icon,
+              title: data.body.title,
+              text: data.body.text,
+              showConfirmButton: false,
+              timer: 2000,
+            });
+            setTimeout(() => {
+              window.location.href = "./home";
+            }, 2300);
+          }
+        } catch (err) {
+          console.clear();
+          let status = err.status || 500;
+          let message = err.statusText || "Error interno.";
+          if (status != 500) {
+            swalCustomClass.fire({
+              icon: "error",
+              title: err.data.body.title,
+              text: err.data.body.text || "",
+            });
+          } else {
+            swalCustomClass.fire({
+              icon: "error",
+              title: "Error",
+              text: `Error ${status}: ${message}`,
+            });
+          }
+        }
+      }
+    }
+  });
 }
