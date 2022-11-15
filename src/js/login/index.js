@@ -1,5 +1,8 @@
+import { connected } from "../isLoggedIn.js";
 import { theme } from "../theme.js";
 import formValidations from "./validations.js";
+
+connected();
 
 document.addEventListener("DOMContentLoaded", () => {
   theme();
