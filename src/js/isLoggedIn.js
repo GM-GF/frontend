@@ -30,3 +30,33 @@ export async function isLoggedIn() {
     window.location.href = "./login";
   }
 }
+
+export async function connected() {
+  if (localStorage.getItem("id") && localStorage.getItem("token")) {
+    try {
+      const id = localStorage.getItem("id");
+      const token = localStorage.getItem("token");
+      let options = {
+        headers: {
+          Authorization: "Bearer " + token,
+        },
+      };
+      const res = await fetch(`${domain()}/users/${id}`, options);
+      if (!res.ok) {
+        throw {
+          status: response.status,
+          statusText: response.statusText,
+        };
+      } else {
+        window.location.href = "./home";
+      }
+    } catch (err) {
+      localStorage.removeItem("id");
+      localStorage.removeItem("token");
+      window.location.href = "./login";
+    }
+  } else {
+    localStorage.removeItem("id");
+    localStorage.removeItem("token");
+  }
+}
