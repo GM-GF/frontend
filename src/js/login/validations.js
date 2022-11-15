@@ -187,12 +187,9 @@ export default function formValidations() {
               data: data,
             };
           } else {
-            const instiId = localStorage.setItem(
-              "instiId",
-              data.body.user.instiId
-            );
+            const id = localStorage.setItem("id", data.body.user.id);
             const token = localStorage.setItem("token", data.body.token);
-            localStorage.getItem("instiId") ? instiId : instiId;
+            localStorage.getItem("id") ? id : id;
             localStorage.getItem("token") ? token : token;
             swalCustomClass.fire({
               position: "center",
