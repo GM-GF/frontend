@@ -1,0 +1,13 @@
+main {
+  padding: 10rem 3rem 8rem 3rem;
+}
+@media (min-width: 700px) {
+  main {
+    padding: 12rem 4rem 8rem 4rem;
+  }
+}
+@media (min-width: 1000px) {
+  main {
+    padding: 4rem;
+  }
+}
