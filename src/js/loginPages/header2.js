@@ -41,14 +41,9 @@ export default function header(container, name) {
               <i class="fa-solid fa-book nav-links-1"></i>
               <span class="link-name">Asignaturas</span>
             </a>
-          </li><li>
-            <a href="./asignaturas ">
-              <i class="fa-solid fa-book nav-links-1"></i>
-              <span class="link-name">Asignaturas</span>
-            </a>
           </li>
           <li>
-            <a href="/">
+            <a href="./usuarios">
               <i class="fa-solid fa-users nav-links-1"></i>
               <span class="link-name">Usuarios</span>
             </a>
