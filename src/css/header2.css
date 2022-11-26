@@ -736,7 +736,7 @@ body.dark-theme .m-header .mode-btn button::before {
     left: 1.4rem;
   }
   .d-main {
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--light-mode-background);
     left: 23rem;
     width: calc(100% - 26rem);
