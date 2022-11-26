@@ -18,7 +18,10 @@ export async function isLoggedIn() {
           status: res.status,
           statusText: res.statusText,
         };
-      } else header("header", data.body[0].name);
+      } else {
+        if (document.querySelector("header"))
+          header("header", data.body[0].name);
+      }
     } catch (err) {
       localStorage.removeItem("id");
       localStorage.removeItem("token");
